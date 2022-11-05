@@ -1,0 +1,45 @@
+{
+    "foo": "bar",
+    "baz": "qux",
+    "fruits": ["apples", "oranges", "bananas"],
+    "nested": {
+        "foo": "bar",
+        "baz": "qux",
+        "nested": {
+            "foo": "bar",
+            "baz": "qux",
+            "nested": {
+                "foo": "bar",
+                "baz": "qux",
+                "nested": {
+                    "foo": "bar",
+                    "baz": "qux",
+                    "nested": {
+                        "foo": "bar",
+                        "baz": "qux",
+                        "nested": {
+                            "foo": "bar",
+                            "baz": "qux",
+                            "nested": {
+                              "foo": "bar",
+                              "baz": "qux",
+                              "nested": {
+                                  "foo": "bar",
+                                  "baz": "qux",
+                                  "nested": {
+                                      "foo": "bar",
+                                      "baz": "qux",
+                                      "nested": {
+                                          "foo": "bar",
+                                          "baz": "qux"
+                                      }
+                                  }
+                              }
+                          }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
