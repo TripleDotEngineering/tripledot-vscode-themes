@@ -7,6 +7,7 @@
   "author": {
     "name": "Josh Kaplan"
   },
+  "repository": "https://github.com/TripleDotEngineering/tripledot-vscode-themes",
   "license": "MIT",
   "engines": {
     "vscode": "^1.73.0"
