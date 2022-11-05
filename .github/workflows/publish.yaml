@@ -19,6 +19,8 @@ jobs:
   vsce-publish:
     runs-on: ubuntu-latest
     steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v3
       - name: 'VSCE Install'
         run: npm install -g vsce
       - name: 'VSCE Publish'
