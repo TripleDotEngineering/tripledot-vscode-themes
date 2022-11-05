@@ -3,7 +3,7 @@
   "displayName": "Triple Dot Themes",
   "description": "A collection of themes - including Monokai Neue with multi-level JSON highlighting",
   "version": "0.1.0",
-  "publisher": "Triple Dot",
+  "publisher": "TripleDot",
   "author": {
     "name": "Josh Kaplan"
   },
@@ -19,7 +19,7 @@
     "Themes"
   ],
   "keywords": ["themes", "color scheme", "monokai", "monokai neue", "json"],
-  "icon": "https://github.com/TripleDotEngineering/tripledot-vscode-themes/blob/main/icon.png",
+  "icon": "icon.png",
   "contributes": {
     "themes": [
       {
