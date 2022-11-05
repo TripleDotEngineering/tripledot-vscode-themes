@@ -18,7 +18,7 @@
     "Themes"
   ],
   "keywords": ["themes", "color scheme", "monokai", "monokai neue", "json"],
-  "icon": "./icon.png",
+  "icon": "https://github.com/TripleDotEngineering/tripledot-vscode-themes/blob/main/icon.png",
   "contributes": {
     "themes": [
       {
