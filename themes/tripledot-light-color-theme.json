@@ -4,9 +4,13 @@
     "editor.background": "#fff",
     "editor.foreground": "#262626",
     "sideBar.background": "#f8f8f8",
+    "sideBar.border": "#f8f8f8",
+    "titleBar.activeBackground": "#fff",
     "activityBar.background": "#c51162",
     "statusBar.background": "#333",
-    "list.activeSelectionIconForeground": "#fff"
+    "list.activeSelectionIconForeground": "#fff",
+    "terminal.background": "#fff",
+    "terminal.foreground": "#262626"
   },
   "tokenColors": [
     {
@@ -419,6 +423,15 @@
       "settings": {
         "foreground": "#434343"
       }
+    },
+    {
+      "name": "JS Object Quoted Keys",
+      "scope": [
+        "source.js meta.function.js constant.other.object.key.js string.quoted.double.js",
+        "source.js meta.function.arrow.js constant.other.object.key.js string.quoted.double.js",
+        "source.js constant.other.object.key.js string.quoted.double.js"
+      ],
+      "settings": {}
     },
     {
       "name": "JSON Key - Level 0",
