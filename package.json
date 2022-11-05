@@ -13,7 +13,8 @@
     "vscode": "^1.73.0"
   },
   "scripts": {
-    "build": "node ./src/index.js"
+    "build": "node ./src/index.js",
+    "test": "echo \"No tests defined\"; exit 0;"
   },
   "categories": [
     "Themes"

@@ -1,0 +1,55 @@
+name: Node.js CI
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # Dependency Review Action
+  #
+  # This Action will scan dependency manifest files that change as part of a
+  # Pull Request, surfacing known-vulnerable versions of the packages declared
+  # or updated in the PR. Once installed, if the workflow run is marked as
+  # required, PRs introducing known-vulnerable packages will be blocked from
+  # merging.
+  #
+  # Source repository: https://github.com/actions/dependency-review-action
+  # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v3
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@v2
+
+  # Version Check
+  #
+  # This job will check the current version in the package.json against existing
+  # git tags and fail if the tag already exists.
+  version-check:
+    runs-on: ubuntu-latest
+    steps:
+    - run: test `git tag -l "v$(node scripts/print-version.js)" | wc -l` == 0
+
+  # Build and Test
+  #
+  # Runs the build and test using Node 16.x and 18x.
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
