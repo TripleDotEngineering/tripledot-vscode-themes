@@ -19,6 +19,8 @@ jobs:
   vsce-publish:
     runs-on: ubuntu-latest
     steps:
+      - name: 'VSCE Install'
+        run: npm install -g vsce
       - name: 'VSCE Publish'
         run: vsce publish -p ${{ secrets.vsceAccessToken }}
 
