@@ -3,9 +3,15 @@ module.exports = baseTemplate;
 function baseTemplate({
   name,
   isDark,
+  foregroundColor,
+  backgroundColor,
   activityBarColor,
   statusBarColor,
   sideBarBackgroundColor,
+  sideBarBorderColor,
+  titleBarBackgroundColor,
+  terminalBackgroundColor,
+  terminalForegroundColor,
   commentsColor,
   keywordsColor,
   typesColor,
@@ -21,8 +27,11 @@ function baseTemplate({
   jsonUnquotedStrings,
   jsonKeyColors
 }) {
-  const foreground = (isDark) ? "#fff" : "#262626";
-  const background = (isDark) ? "#262626" : "#fff";
+  const foregroundDefault = (isDark) ? "#fff" : "#262626";
+  const backgroundDefault = (isDark) ? "#262626" : "#fff";
+  const foreground = foregroundColor || foregroundDefault;
+  const background = backgroundColor || backgroundDefault;
+
 
   const template = {
     "name": name,
@@ -30,9 +39,13 @@ function baseTemplate({
       "editor.background": background,
       "editor.foreground": foreground,
       "sideBar.background": sideBarBackgroundColor,
+      "sideBar.border": sideBarBorderColor || sideBarBackgroundColor,
+      "titleBar.activeBackground": titleBarBackgroundColor || background,
       "activityBar.background": activityBarColor,
       "statusBar.background": statusBarColor,
-      "list.activeSelectionIconForeground": "#fff"
+      "list.activeSelectionIconForeground": "#fff",
+      "terminal.background": terminalBackgroundColor || background,
+      "terminal.foreground": terminalForegroundColor || foreground,
     },
     "tokenColors": [
       {
@@ -449,6 +462,20 @@ function baseTemplate({
       }
     ]
   }
+
+
+  template.tokenColors.push({
+    "name": "JS Object Quoted Keys",
+    "scope": [
+      'source.js meta.function.js constant.other.object.key.js string.quoted.double.js',
+      'source.js meta.function.arrow.js constant.other.object.key.js string.quoted.double.js',
+      'source.js constant.other.object.key.js string.quoted.double.js'
+    ],
+    "settings": {
+      "foreground": jsonUnquotedStrings
+    }
+  });
+
 
   // Autogenerate JSON scopes
   for (let i = 0; i < jsonKeyColors.length; i++) {

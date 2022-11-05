@@ -6,6 +6,13 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.get('/json', (req, res) => {
+  res.send({
+    this: "is",
+    "a json": "object"
+  })
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
