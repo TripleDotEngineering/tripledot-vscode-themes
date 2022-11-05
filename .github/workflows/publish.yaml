@@ -1,14 +1,9 @@
-name: Node.js CI
+name: Publish VSCode Extension
 
 on:
-  pull_request:
+  push:
     branches: [ "main" ]
 
-permissions:
-  contents: write
-  pull-requests: write
-  issues: read
-  packages: none
 
 jobs:
   # Dependency Review Action
