@@ -19,7 +19,7 @@ const template = baseTemplate({
   functionsColor: myColors.cyanBright,
   classesColor: myColors.cyanBright,
   numbersColor: "#fff",
-  stringsColor: "#d8d8d8",
+  stringsColor: myColors.lightYellow,
   stringSymbolsColor: "#d8d8d8",
   stringRegexColor: "#d8d8d8",
   punctuationColor: "#fff",

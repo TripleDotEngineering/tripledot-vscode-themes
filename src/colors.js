@@ -5,7 +5,8 @@ module.exports = {
     "green": "#64dd17",
     "magentaBright": "#ec257e",
     "cyanBright": "#10dfff",
-    "greenBright": "#85eb43"
+    "greenBright": "#85eb43",
+    "lightYellow": "#ecf5a1"
   },
   "microsoft": {
     "OrangeRed": "#F25022",
