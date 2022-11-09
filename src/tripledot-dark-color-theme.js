@@ -6,6 +6,9 @@ const template = baseTemplate({
   name: "Triple Dot Dark",
   isDark: true,
   background: "#262626",
+  tabActiveBackgroundColor: "#262626",
+  tabInactiveBackgroundColor: "#191919",
+  tabInactiveForegroundColor: "#777777",
   activityBarColor: myColors.magenta,
   statusBarColor: "#333",
   sideBarBackgroundColor: "#292929",
@@ -27,7 +30,8 @@ const template = baseTemplate({
     myColors.cyanBright, myColors.magentaBright, myColors.greenBright,
     myColors.cyanBright, myColors.magentaBright, myColors.greenBright,
     myColors.cyanBright, myColors.magentaBright, myColors.greenBright,
-    myColors.cyanBright]
+    myColors.cyanBright],
+  markupHeadingsColor: myColors.magentaBright
 })
 
 template.tokenColors.push({
