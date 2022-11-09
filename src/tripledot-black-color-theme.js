@@ -29,7 +29,8 @@ const template = baseTemplate({
     myColors.cyanBright, myColors.magentaBright, myColors.greenBright,
     myColors.cyanBright, myColors.magentaBright, myColors.greenBright,
     myColors.cyanBright, myColors.magentaBright, myColors.greenBright,
-    myColors.cyanBright]
+    myColors.cyanBright],
+  markupHeadingsColor: myColors.magentaBright
 })
 
 template.tokenColors.push({

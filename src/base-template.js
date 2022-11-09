@@ -25,7 +25,16 @@ function baseTemplate({
   stringRegexColor,
   punctuationColor,
   jsonUnquotedStrings,
-  jsonKeyColors
+  jsonKeyColors,
+  markupHeadingsColor,
+  markupLinkColor,
+  markupListsColor,
+  markupStylingColor,
+  markupInlineColor,
+  tabActiveBackgroundColor,
+  tabactiveForegroundColor,
+  tabInactiveBackgroundColor,
+  tabInactiveForegroundColor
 }) {
   const foregroundDefault = (isDark) ? "#fff" : "#262626";
   const backgroundDefault = (isDark) ? "#262626" : "#fff";
@@ -38,6 +47,10 @@ function baseTemplate({
     "colors": {
       "editor.background": background,
       "editor.foreground": foreground,
+      "tab.activeBackground": tabActiveBackgroundColor || background,
+      "tab.activeForeground": tabactiveForegroundColor || foreground,
+      "tab.inactiveBackground": tabInactiveBackgroundColor || background,
+      "tab.inactiveForeground": tabInactiveForegroundColor || foreground,
       "sideBar.background": sideBarBackgroundColor,
       "sideBar.border": sideBarBorderColor || sideBarBackgroundColor,
       "titleBar.activeBackground": titleBarBackgroundColor || background,
@@ -341,7 +354,7 @@ function baseTemplate({
         "name": "Markup: Error",
         "scope": "markup.error",
         "settings": {
-          "foreground": "#660000"
+          "foreground": "#AA0000"
         }
       },
       {
@@ -355,7 +368,7 @@ function baseTemplate({
         "name": "Markup: Link",
         "scope": "meta.link",
         "settings": {
-          "foreground": "#4B83CD"
+          "foreground": markupLinkColor ||  functionsColor
         }
       },
       {
@@ -379,7 +392,7 @@ function baseTemplate({
         "name": "Markup: Heading",
         "scope": "markup.heading",
         "settings": {
-          "foreground": "#AA3731"
+          "foreground": markupHeadingsColor || keywordsColor
         }
       },
       {
@@ -407,14 +420,14 @@ function baseTemplate({
         "name": "Markup Quote",
         "scope": "markup.quote",
         "settings": {
-          "foreground": "#7A3E9D"
+          "foreground": foreground
         }
       },
       {
         "name": "Markup Lists",
         "scope": "markup.list",
         "settings": {
-          "foreground": "#4B83CD"
+          "foreground": markupListsColor || foreground
         }
       },
       {
@@ -424,7 +437,7 @@ function baseTemplate({
           "markup.italic"
         ],
         "settings": {
-          "foreground": "#448C27"
+          "foreground": markupStylingColor || functionsColor
         }
       },
       {
@@ -432,7 +445,7 @@ function baseTemplate({
         "scope": "markup.inline.raw",
         "settings": {
           "fontStyle": "",
-          "foreground": "#AB6526"
+          "foreground": markupInlineColor || typesColor
         }
       },
       {
