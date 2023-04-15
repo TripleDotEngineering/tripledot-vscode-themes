@@ -2,7 +2,7 @@
   "name": "tdthemes",
   "displayName": "Triple Dot Themes",
   "description": "A collection of themes - including Monokai Neue with multi-level JSON highlighting",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "publisher": "TripleDot",
   "author": {
     "name": "Josh Kaplan"
@@ -26,7 +26,7 @@
       {
         "label": "Triple Dot Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/tripledot-dark.json"
+        "path": "./themes/tripledot-dark-color-theme.json"
       },
       {
         "label": "Triple Dot Black",
@@ -44,6 +44,11 @@
         "path": "./themes/monokai-neue.json"
       },
       {
+        "label": "Monokai Neue",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-neue-color-theme.json"
+      },
+      {
         "label": "Microsoft",
         "uiTheme": "vs",
         "path": "./themes/microsoft.json"
@@ -51,12 +56,12 @@
       {
         "label": "Microsoft Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/microsoft-dark.json"
+        "path": "./themes/microsoft-dark-color-theme.json"
       },
       {
         "label": "Google-Style",
         "uiTheme": "vs",
-        "path": "./themes/google.json"
+        "path": "./themes/google-color-theme.json"
       }
     ]
   },
