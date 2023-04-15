@@ -49,6 +49,11 @@
         "path": "./themes/monokai-neue-color-theme.json"
       },
       {
+        "label": "Monokai Neue",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-neue-color-theme.json"
+      },
+      {
         "label": "Microsoft",
         "uiTheme": "vs",
         "path": "./themes/microsoft-color-theme.json"
