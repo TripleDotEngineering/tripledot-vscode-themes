@@ -1,0 +1,27 @@
+
+.navbar__brand {
+    color: var(--ifm-font-color-base);
+  }
+
+
+  .footer__copyright {
+    font-size: 0.9rem;
+  }
+
+  article p ,
+  article li {
+    font-family: "IBM Plex Serif";
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  article li[class^="tag"] {
+    font-family: var(--ifm-font-family-base);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  article b, article strong {
+    font-weight: 700;
+  }
