@@ -25,7 +25,7 @@ def main(num):
     if flag:
         print(num, "is not a prime number")
     else:
-        print(num, "is a prime number")
+        print(f"{num:03d} is a prime number")
 
 
 if __name__ == '__main__':
