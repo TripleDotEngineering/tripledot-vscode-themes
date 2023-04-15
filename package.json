@@ -26,32 +26,37 @@
       {
         "label": "Triple Dot Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/tripledot-dark-color-theme.json"
-      },
-      {
-        "label": "Monokai Neue",
-        "uiTheme": "vs-dark",
-        "path": "./themes/monokai-neue-color-theme.json"
+        "path": "./themes/tripledot-dark.json"
       },
       {
         "label": "Triple Dot Black",
         "uiTheme": "vs-dark",
-        "path": "./themes/tripledot-black-color-theme.json"
+        "path": "./themes/tripledot-black.json"
       },
       {
         "label": "Triple Dot Light",
         "uiTheme": "vs",
-        "path": "./themes/tripledot-light-color-theme.json"
+        "path": "./themes/tripledot-light.json"
+      },
+      {
+        "label": "Monokai Neue",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-neue.json"
       },
       {
         "label": "Microsoft",
         "uiTheme": "vs",
-        "path": "./themes/microsoft-color-theme.json"
+        "path": "./themes/microsoft.json"
       },
       {
         "label": "Microsoft Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/microsoft-dark-color-theme.json"
+        "path": "./themes/microsoft-dark.json"
+      },
+      {
+        "label": "Google-Style",
+        "uiTheme": "vs",
+        "path": "./themes/google.json"
       }
     ]
   },

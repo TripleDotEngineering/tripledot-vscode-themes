@@ -3,43 +3,12 @@ module.exports = baseTemplate;
 function baseTemplate({
   name,
   isDark,
-  foregroundColor,
-  backgroundColor,
-  activityBarColor,
-  statusBarColor,
-  sideBarBackgroundColor,
-  sideBarBorderColor,
-  titleBarBackgroundColor,
-  terminalBackgroundColor,
-  terminalForegroundColor,
-  commentsColor,
-  keywordsColor,
-  typesColor,
-  constantsColor,
-  variablesColor,
-  functionsColor,
-  classesColor,
-  numbersColor,
-  stringsColor,
-  stringSymbolsColor,
-  stringRegexColor,
-  punctuationColor,
-  jsonUnquotedStrings,
-  jsonKeyColors,
-  markupHeadingsColor,
-  markupLinkColor,
-  markupListsColor,
-  markupStylingColor,
-  markupInlineColor,
-  tabActiveBackgroundColor,
-  tabactiveForegroundColor,
-  tabInactiveBackgroundColor,
-  tabInactiveForegroundColor
+  ...props
 }) {
   const foregroundDefault = (isDark) ? "#fff" : "#262626";
   const backgroundDefault = (isDark) ? "#262626" : "#fff";
-  const foreground = foregroundColor || foregroundDefault;
-  const background = backgroundColor || backgroundDefault;
+  const foreground = props.foregroundColor || foregroundDefault;
+  const background = props.backgroundColor || backgroundDefault;
 
 
   const template = {
@@ -47,18 +16,18 @@ function baseTemplate({
     "colors": {
       "editor.background": background,
       "editor.foreground": foreground,
-      "tab.activeBackground": tabActiveBackgroundColor || background,
-      "tab.activeForeground": tabactiveForegroundColor || foreground,
-      "tab.inactiveBackground": tabInactiveBackgroundColor || background,
-      "tab.inactiveForeground": tabInactiveForegroundColor || foreground,
-      "sideBar.background": sideBarBackgroundColor,
-      "sideBar.border": sideBarBorderColor || sideBarBackgroundColor,
-      "titleBar.activeBackground": titleBarBackgroundColor || background,
-      "activityBar.background": activityBarColor,
-      "statusBar.background": statusBarColor,
+      "tab.activeBackground": props.tabActiveBackgroundColor || background,
+      "tab.activeForeground": props.tabactiveForegroundColor || foreground,
+      "tab.inactiveBackground": props.tabInactiveBackgroundColor || background,
+      "tab.inactiveForeground": props.tabInactiveForegroundColor || foreground,
+      "sideBar.background": props.sideBarBackgroundColor,
+      "sideBar.border": props.sideBarBorderColor || props.sideBarBackgroundColor,
+      "titleBar.activeBackground": props.titleBarBackgroundColor || background,
+      "activityBar.background": props.activityBarColor,
+      "statusBar.background": props.statusBarColor,
       "list.activeSelectionIconForeground": "#fff",
-      "terminal.background": terminalBackgroundColor || background,
-      "terminal.foreground": terminalForegroundColor || foreground,
+      "terminal.background": props.terminalBackgroundColor || background,
+      "terminal.foreground": props.terminalForegroundColor || foreground,
     },
     "tokenColors": [
       {
@@ -69,7 +38,7 @@ function baseTemplate({
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": commentsColor || "#AAAAAA"
+          "foreground": props.commentsColor || "#AAAAAA"
         }
       },
       {
@@ -77,7 +46,7 @@ function baseTemplate({
         "scope": "comment.block.preprocessor",
         "settings": {
           "fontStyle": "",
-          "foreground": commentsColor || "#AAAAAA"
+          "foreground": props.commentsColor || "#AAAAAA"
         }
       },
       {
@@ -87,14 +56,14 @@ function baseTemplate({
           "comment.block.documentation"
         ],
         "settings": {
-          "foreground": "#448C27"
+          "foreground": "#AAAAAA"
         }
       },
       {
         "name": "Invalid - Illegal",
         "scope": "invalid.illegal",
         "settings": {
-          "foreground": "#660000"
+          "foreground": "#990000"
         }
       },
       {
@@ -112,7 +81,7 @@ function baseTemplate({
         ],
         "settings": {
           "fontStyle": "bold",
-          "foreground": keywordsColor
+          "foreground": props.keywordsColor
         }
       },
       {
@@ -122,7 +91,7 @@ function baseTemplate({
           "support.type"
         ],
         "settings": {
-          "foreground": typesColor
+          "foreground": props.typesColor
         }
       },
       {
@@ -133,7 +102,7 @@ function baseTemplate({
           "variable.language"
         ],
         "settings": {
-          "foreground": constantsColor
+          "foreground": props.constantsColor
         }
       },
       {
@@ -143,7 +112,7 @@ function baseTemplate({
           "support.variable"
         ],
         "settings": {
-          "foreground": variablesColor
+          "foreground": props.variablesColor
         }
       },
       {
@@ -154,7 +123,7 @@ function baseTemplate({
         ],
         "settings": {
           "fontStyle": "bold",
-          "foreground": functionsColor
+          "foreground": props.functionsColor
         }
       },
       {
@@ -166,14 +135,14 @@ function baseTemplate({
         ],
         "settings": {
           "fontStyle": "bold",
-          "foreground": classesColor
+          "foreground": props.classesColor
         }
       },
       {
         "name": "Exceptions",
         "scope": "entity.name.exception",
         "settings": {
-          "foreground": "#660000"
+          "foreground": "#990000"
         }
       },
       {
@@ -191,21 +160,21 @@ function baseTemplate({
           "constant"
         ],
         "settings": {
-          "foreground": numbersColor
+          "foreground": props.numbersColor
         }
       },
       {
         "name": "Strings",
         "scope": "string",
         "settings": {
-          "foreground": stringsColor
+          "foreground": props.stringsColor
         }
       },
       {
         "name": "Strings: Unquoted JS",
         "scope": "string.unquoted.js",
         "settings": {
-          "foreground": jsonUnquotedStrings ? jsonUnquotedStrings : foreground
+          "foreground": props.jsonUnquotedStrings ? props.jsonUnquotedStrings : foreground
         }
 
       },
@@ -220,23 +189,26 @@ function baseTemplate({
         "name": "Strings: Regular Expressions",
         "scope": "string.regexp",
         "settings": {
-          "foreground": stringRegexColor
+          "foreground": props.stringRegexColor
         }
       },
       {
         "name": "Strings: Symbols",
         "scope": "constant.other.symbol",
         "settings": {
-          "foreground": stringSymbolsColor
+          "foreground": props.stringSymbolsColor
         }
       },
       {
         "name": "Punctuation",
         "scope": "punctuation",
         "settings": {
-          "foreground": punctuationColor
+          "foreground": props.punctuationColor
         }
       },
+
+      /* --------------------( HTML )-------------------- */
+
       {
         "name": "HTML: Doctype Declaration",
         "scope": [
@@ -258,14 +230,14 @@ function baseTemplate({
           "punctuation.definition.tag.end.html"
         ],
         "settings": {
-          "foreground": "#91B3E0"
+          "foreground": props.htmlTagColor || foreground
         }
       },
       {
         "name": "HTML: Tag Names",
         "scope": "entity.name.tag",
         "settings": {
-          "foreground": "#4B83CD"
+          "foreground": props.htmlTagNameColor || foreground
         }
       },
       {
@@ -276,7 +248,7 @@ function baseTemplate({
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#91B3E0"
+          "foreground": props.htmlAttributeColor || foreground
         }
       },
       {
@@ -286,9 +258,13 @@ function baseTemplate({
           "punctuation.definition.entity"
         ],
         "settings": {
-          "foreground": "#AB6526"
+          "foreground": props.htmlEntititesColor || foreground
         }
       },
+
+
+
+
       {
         "name": "CSS: Selectors",
         "scope": [
@@ -298,7 +274,7 @@ function baseTemplate({
           "entity.name.tag.css"
         ],
         "settings": {
-          "foreground": "#7A3E9D"
+          "foreground": props.cssSelectorsColor || foreground
         }
       },
       {
@@ -308,7 +284,7 @@ function baseTemplate({
           "support.type.property-name"
         ],
         "settings": {
-          "foreground": "#AB6526"
+          "foreground": props.cssPropertyNamesColor || foreground
         }
       },
       {
@@ -319,7 +295,7 @@ function baseTemplate({
           "support.constant.property-value"
         ],
         "settings": {
-          "foreground": "#448C27"
+          "foreground": props.cssPropertyValuesColor || foreground
         }
       },
       {
@@ -329,6 +305,10 @@ function baseTemplate({
           "fontStyle": "bold"
         }
       },
+
+
+
+
       {
         "name": "Markup: Changed",
         "scope": "markup.changed",
@@ -368,7 +348,7 @@ function baseTemplate({
         "name": "Markup: Link",
         "scope": "meta.link",
         "settings": {
-          "foreground": markupLinkColor ||  functionsColor
+          "foreground": props.markupLinkColor ||  props.functionsColor
         }
       },
       {
@@ -392,7 +372,7 @@ function baseTemplate({
         "name": "Markup: Heading",
         "scope": "markup.heading",
         "settings": {
-          "foreground": markupHeadingsColor || keywordsColor
+          "foreground": props.markupHeadingsColor || props.keywordsColor
         }
       },
       {
@@ -406,7 +386,7 @@ function baseTemplate({
         "name": "Markup: Traceback",
         "scope": "markup.traceback",
         "settings": {
-          "foreground": "#660000"
+          "foreground": "#990000"
         }
       },
       {
@@ -427,7 +407,7 @@ function baseTemplate({
         "name": "Markup Lists",
         "scope": "markup.list",
         "settings": {
-          "foreground": markupListsColor || foreground
+          "foreground": props.markupListsColor || foreground
         }
       },
       {
@@ -437,7 +417,7 @@ function baseTemplate({
           "markup.italic"
         ],
         "settings": {
-          "foreground": markupStylingColor || functionsColor
+          "foreground": props.markupStylingColor || props.functionsColor
         }
       },
       {
@@ -445,9 +425,62 @@ function baseTemplate({
         "scope": "markup.inline.raw",
         "settings": {
           "fontStyle": "",
-          "foreground": markupInlineColor || typesColor
+          "foreground": props.markupInlineColor || props.typesColor
         }
       },
+
+
+      /* --------------------( Python )-------------------- */
+
+      {
+        "name": "Python Docstrings",
+        "scope": "source.python string.quoted.docstring.multi.python",
+        "settings": {
+          "foreground": props.pythonDocstringsColor || props.commentsColor || foreground
+        }
+      },
+      {
+        "name": "Python Function Calls",
+        "scope": "source.python meta.function-call.python meta.function-call.generic.python",
+        "settings": {
+          "foreground": props.pythonFunctionCallsColor || props.functionsColor || foreground
+        }
+      },
+
+
+      /* --------------------( C# )-------------------- */
+      {
+        "name": "C#: Keywords",
+        "scope": [
+          "source.cs keyword.other.new.cs",
+        ],
+        "settings": {
+          "foreground": props.cSharpKeywordsColor || props.functionsColor || foreground
+        }
+      },
+      {
+        "name": "C#: Types",
+        "scope": [
+          "source.cs keyword.type.cs",
+          "source.cs entity.name.type.cs",
+          "source.cs keyword.other.class.cs"
+        ],
+        "settings": {
+          "foreground": props.cSharpTypesColor || props.typesColor || foreground
+        }
+      },
+      {
+        "name": "C#: Classnames",
+        "scope": [
+          "source.cs entity.name.type.class.cs"
+        ],
+        "settings": {
+          "foreground": props.cSharpClassColor || props.functionsColor || foreground
+        }
+      },
+
+
+
       {
         "name": "Extra: Diff Range",
         "scope": [
@@ -485,13 +518,13 @@ function baseTemplate({
       'source.js constant.other.object.key.js string.quoted.double.js'
     ],
     "settings": {
-      "foreground": jsonUnquotedStrings
+      "foreground": props.jsonUnquotedStrings
     }
   });
 
 
   // Autogenerate JSON scopes
-  for (let i = 0; i < jsonKeyColors.length; i++) {
+  for (let i = 0; i < props.jsonKeyColors.length; i++) {
     let scope = [
       'support.type.property-name.json',
       'string.json',
@@ -507,7 +540,7 @@ function baseTemplate({
         "name": `JSON Key - Level ${i}`,
         "scope": scope.reverse().join(' '),
         "settings": {
-          "foreground": jsonKeyColors[i],
+          "foreground": props.jsonKeyColors[i],
         }
       }
     );

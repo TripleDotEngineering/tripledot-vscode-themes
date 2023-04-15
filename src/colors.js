@@ -8,6 +8,12 @@ module.exports = {
     "greenBright": "#85eb43",
     "lightYellow": "#ecf5a1"
   },
+  "tripledot-nix": {
+    "magenta": "#c44b8a",
+    "blue": "#4b8ac4",
+    "green": "#8ac44b",
+    "yellow": "#cbb74f"
+  },
   "microsoft": {
     "OrangeRed": "#F25022",
     "Green": "#7FBA00",
@@ -16,7 +22,7 @@ module.exports = {
     "Gray": "#737373",
     "Purple": "#9332BF",
     "LightGray": "#C3C3C3",
-    "AmethystPruple": "#AE4BD5",
+    "AmethystPurple": "#AE4BD5",
     "LavenderPurple": "#CA64EA"
   },
   "netflix": {
@@ -31,12 +37,12 @@ module.exports = {
     "Black": "#000"
   },
   "google": {
-    "Blue": "#4285F4",
-    "Red": "#DB4437",
-    "Yellow": "#F4B400",
-    "Green": "#0F9D58",
-    "Purple": "#9800ba",
-    "Gray": "#737373",
+    "blue": "#4285F4",
+    "red": "#DB4437",
+    "yellow": "#F4B400",
+    "green": "#0F9D58",
+    "purple": "#9800ba",
+    "gray": "#737373",
   },
   "ibm": {
     "Blue": "#006699",
