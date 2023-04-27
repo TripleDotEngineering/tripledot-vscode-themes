@@ -213,7 +213,7 @@
         "punctuation.definition.tag.end.html"
       ],
       "settings": {
-        "foreground": "#333"
+        "foreground": "#fc618d"
       }
     },
     {
@@ -274,7 +274,7 @@
         "support.constant.property-value"
       ],
       "settings": {
-        "foreground": "#333"
+        "foreground": "#5ad4e6"
       }
     },
     {
