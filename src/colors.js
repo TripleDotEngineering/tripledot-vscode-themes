@@ -3,6 +3,7 @@ module.exports = {
     "magenta": "#c51162",
     "cyan": "#00b8d4",
     "green": "#64dd17",
+    "purple": "#ca6fff",
     "magentaBright": "#ec257e",
     "cyanBright": "#10dfff",
     "greenBright": "#85eb43",
@@ -12,7 +13,9 @@ module.exports = {
     "magenta": "#c44b8a",
     "blue": "#4b8ac4",
     "green": "#8ac44b",
-    "yellow": "#cbb74f"
+    "purple": "#8f5ac9",
+    "yellow": "#cbb74f",
+    "yellowLight": "#f0ed6d"
   },
   "microsoft": {
     "OrangeRed": "#F25022",

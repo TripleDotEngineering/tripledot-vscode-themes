@@ -70,7 +70,7 @@ function baseTemplate({
         "name": "Operators",
         "scope": "keyword.operator",
         "settings": {
-          "foreground": "#777777"
+          "foreground": foreground
         }
       },
       {
@@ -444,6 +444,13 @@ function baseTemplate({
         "scope": "source.python meta.function-call.python meta.function-call.generic.python",
         "settings": {
           "foreground": props.pythonFunctionCallsColor || props.functionsColor || foreground
+        }
+      },
+      {
+        "name": "Python Logic Operators",
+        "scope": "source.python keyword.operator.logical.python",
+        "settings": {
+          "foreground": props.pythonLogicOperatorsColor || props.keywordsColor || foreground
         }
       },
 

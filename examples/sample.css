@@ -1,3 +1,6 @@
+:root {
+    --ifm-color-primary: #25c2a0;
+}
 
 .navbar__brand {
     color: var(--ifm-font-color-base);

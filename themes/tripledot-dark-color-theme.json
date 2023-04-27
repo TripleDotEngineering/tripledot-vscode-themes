@@ -57,7 +57,7 @@
       "name": "Operators",
       "scope": "keyword.operator",
       "settings": {
-        "foreground": "#777777"
+        "foreground": "#fff"
       }
     },
     {
@@ -147,7 +147,7 @@
         "constant"
       ],
       "settings": {
-        "foreground": "#fff"
+        "foreground": "#ca6fff"
       }
     },
     {
@@ -213,7 +213,7 @@
         "punctuation.definition.tag.end.html"
       ],
       "settings": {
-        "foreground": "#333"
+        "foreground": "#c51162"
       }
     },
     {
@@ -274,7 +274,7 @@
         "support.constant.property-value"
       ],
       "settings": {
-        "foreground": "#333"
+        "foreground": "#00b8d4"
       }
     },
     {
@@ -415,6 +415,13 @@
       "scope": "source.python meta.function-call.python meta.function-call.generic.python",
       "settings": {
         "foreground": "#10dfff"
+      }
+    },
+    {
+      "name": "Python Logic Operators",
+      "scope": "source.python keyword.operator.logical.python",
+      "settings": {
+        "foreground": "#ec257e"
       }
     },
     {
