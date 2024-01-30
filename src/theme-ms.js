@@ -1,32 +1,37 @@
 const baseTemplate = require('./base-template');
-const colors = require('./colors');
-const msColors = colors['microsoft'];
+
+const msColors = {
+  "OrangeRed": "#F25022",
+  "Green": "#7FBA00",
+  "Blue": "#00A4EF",
+  "Yellow": "#FFB900",
+  "Gray": "#737373",
+  "Purple": "#9332BF",
+  "LightGray": "#C3C3C3",
+  "AmethystPurple": "#AE4BD5",
+  "LavenderPurple": "#CA64EA"
+};
 
 const template = baseTemplate({
-  name: "Microsoft-Inspired Style (Dark)",
-  isDark: true,
-  backgroundColor: "#393939",
-  tabActiveBackgroundColor: "#393939",
-  tabInactiveBackgroundColor: "#333",
-  tabInactiveForegroundColor: "#777",
-  titleBarBackgroundColor: "#333",
+  name: "MS",
+  primary: msColors.Blue,
+  isDark: false,
+  /*tabActiveBackgroundColor: "#ffffff",
+  tabInactiveBackgroundColor: "#f2f2f2",
+  tabInactiveForegroundColor: "#777777",
+  titleBarBackgroundColor: "#e4e4e4",*/
   activityBarColor: msColors.Blue,
   statusBarColor: msColors.OrangeRed,
-  sideBarBackgroundColor: "#333",
-  sideBarBorderColor: "#515151",
+  /*sideBarBackgroundColor: "#f8f8f8",
+  sideBarBorderColor: "#e4e4e4",*/
   keywordsColor: msColors.Blue,
   typesColor: msColors.Green,
-  constantsColor: msColors.LavenderPurple,
-  variablesColor: "#fff",
+  constantsColor: msColors.Purple,
   functionsColor: msColors.OrangeRed,
-  commentsColor: msColors.Gray,
   classesColor: msColors.Blue,
-  numbersColor: "#fff",
-  stringsColor:  msColors.Yellow,
-  stringSymbolsColor: msColors.LavenderPurple,
-  stringRegexColor: msColors.LavenderPurple,
-  punctuationColor: "#fff",
-  htmlTagColor: "#333",
+  stringsColor:  msColors.Gray,
+  stringSymbolsColor: msColors.Purple,
+  stringRegexColor: msColors.Purple,
   htmlTagNameColor: msColors.Blue,
   htmlAttributeColor: msColors.OrangeRed,
   htmlEntitiesColor: msColors.Green,
@@ -43,7 +48,7 @@ const template = baseTemplate({
     msColors.AmethystPurple,
     msColors.Blue
   ],
-  markupHeadingsColor: colors.magenta
+  markupHeadingsColor: msColors.OrangeRed
 });
 
 module.exports = template;

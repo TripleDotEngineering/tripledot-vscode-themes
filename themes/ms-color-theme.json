@@ -1,20 +1,20 @@
 {
-  "name": "Microsoft-Inspired Style (Dark)",
+  "name": "MS",
   "colors": {
-    "editor.background": "#393939",
-    "editor.foreground": "#fff",
-    "tab.activeBackground": "#393939",
-    "tab.activeForeground": "#fff",
-    "tab.inactiveBackground": "#333",
-    "tab.inactiveForeground": "#777",
-    "sideBar.background": "#333",
-    "sideBar.border": "#515151",
-    "titleBar.activeBackground": "#333",
+    "editor.background": "#fff",
+    "editor.foreground": "#262626",
+    "tab.activeBackground": "#fff",
+    "tab.activeForeground": "#262626",
+    "tab.inactiveBackground": "#efefef",
+    "tab.inactiveForeground": "#262626",
+    "tab.activeBorder": "#262626",
+    "sideBar.border": "#919191",
+    "titleBar.activeBackground": "#fff",
     "activityBar.background": "#00A4EF",
     "statusBar.background": "#F25022",
-    "list.activeSelectionIconForeground": "#fff",
-    "terminal.background": "#393939",
-    "terminal.foreground": "#fff"
+    "list.activeSelectionIconForeground": "#262626",
+    "terminal.background": "#fff",
+    "terminal.foreground": "#262626"
   },
   "tokenColors": [
     {
@@ -25,7 +25,7 @@
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#737373"
+        "foreground": "#AAAAAA"
       }
     },
     {
@@ -33,7 +33,7 @@
       "scope": "comment.block.preprocessor",
       "settings": {
         "fontStyle": "",
-        "foreground": "#737373"
+        "foreground": "#AAAAAA"
       }
     },
     {
@@ -57,7 +57,7 @@
       "name": "Operators",
       "scope": "keyword.operator",
       "settings": {
-        "foreground": "#fff"
+        "foreground": "#262626"
       }
     },
     {
@@ -89,7 +89,7 @@
         "variable.language"
       ],
       "settings": {
-        "foreground": "#CA64EA"
+        "foreground": "#9332BF"
       }
     },
     {
@@ -98,9 +98,7 @@
         "variable",
         "support.variable"
       ],
-      "settings": {
-        "foreground": "#fff"
-      }
+      "settings": {}
     },
     {
       "name": "Functions",
@@ -146,15 +144,13 @@
         "constant.character",
         "constant"
       ],
-      "settings": {
-        "foreground": "#fff"
-      }
+      "settings": {}
     },
     {
       "name": "Strings",
       "scope": "string",
       "settings": {
-        "foreground": "#FFB900"
+        "foreground": "#737373"
       }
     },
     {
@@ -175,22 +171,20 @@
       "name": "Strings: Regular Expressions",
       "scope": "string.regexp",
       "settings": {
-        "foreground": "#CA64EA"
+        "foreground": "#9332BF"
       }
     },
     {
       "name": "Strings: Symbols",
       "scope": "constant.other.symbol",
       "settings": {
-        "foreground": "#CA64EA"
+        "foreground": "#9332BF"
       }
     },
     {
       "name": "Punctuation",
       "scope": "punctuation",
-      "settings": {
-        "foreground": "#fff"
-      }
+      "settings": {}
     },
     {
       "name": "HTML: Doctype Declaration",
@@ -213,7 +207,7 @@
         "punctuation.definition.tag.end.html"
       ],
       "settings": {
-        "foreground": "#333"
+        "foreground": "#262626"
       }
     },
     {
@@ -241,7 +235,7 @@
         "punctuation.definition.entity"
       ],
       "settings": {
-        "foreground": "#fff"
+        "foreground": "#262626"
       }
     },
     {
@@ -347,7 +341,7 @@
       "name": "Markup: Heading",
       "scope": "markup.heading",
       "settings": {
-        "foreground": "#00A4EF"
+        "foreground": "#F25022"
       }
     },
     {
@@ -375,14 +369,14 @@
       "name": "Markup Quote",
       "scope": "markup.quote",
       "settings": {
-        "foreground": "#fff"
+        "foreground": "#262626"
       }
     },
     {
       "name": "Markup Lists",
       "scope": "markup.list",
       "settings": {
-        "foreground": "#fff"
+        "foreground": "#262626"
       }
     },
     {
@@ -407,7 +401,7 @@
       "name": "Python Docstrings",
       "scope": "source.python string.quoted.docstring.multi.python",
       "settings": {
-        "foreground": "#737373"
+        "foreground": "#262626"
       }
     },
     {

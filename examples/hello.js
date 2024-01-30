@@ -7,10 +7,15 @@ app.get('/', (req, res) => {
 })
 
 app.get('/json', (req, res) => {
-  res.send({
-    this: "is",
-    "a json": "object"
-  })
+  if (req.headers.authorization && req.headers.authorization == "secret") {
+    res.send({
+      this: "is",
+      "a json": "object"
+    })
+  }
+  else {
+    res.status(401).send("Unauthorized")
+  }
 })
 
 app.listen(port, () => {

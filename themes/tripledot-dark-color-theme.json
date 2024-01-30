@@ -7,6 +7,7 @@
     "tab.activeForeground": "#fff",
     "tab.inactiveBackground": "#191919",
     "tab.inactiveForeground": "#777777",
+    "tab.activeBorder": "#10dfff",
     "sideBar.background": "#292929",
     "sideBar.border": "#515151",
     "titleBar.activeBackground": "#262626",

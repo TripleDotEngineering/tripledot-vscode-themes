@@ -7,6 +7,7 @@ const template = baseTemplate({
   isDark: true,
   background: "#262626",
   foreground: "#fff",
+  primaryColor: myColors.cyanBright,
   tabActiveBackgroundColor: "#262626",
   tabInactiveBackgroundColor: "#191919",
   tabInactiveForegroundColor: "#777777",

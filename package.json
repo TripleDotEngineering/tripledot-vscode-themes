@@ -19,7 +19,13 @@
   "categories": [
     "Themes"
   ],
-  "keywords": ["themes", "color scheme", "monokai", "monokai neue", "json"],
+  "keywords": [
+    "themes",
+    "color scheme",
+    "monokai",
+    "monokai neue",
+    "json"
+  ],
   "icon": "icon.png",
   "contributes": {
     "themes": [
@@ -44,22 +50,22 @@
         "path": "./themes/monokai-neue-color-theme.json"
       },
       {
-        "label": "Microsoft",
+        "label": "MS",
         "uiTheme": "vs",
-        "path": "./themes/microsoft-color-theme.json"
+        "path": "./themes/ms-color-theme.json"
       },
       {
-        "label": "Microsoft Dark",
+        "label": "MS Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/microsoft-dark-color-theme.json"
+        "path": "./themes/ms-dark-color-theme.json"
       },
       {
-        "label": "Google-Style",
-        "uiTheme": "vs",
-        "path": "./themes/google-color-theme.json"
+        "label": "Fluent Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/fluent-dark-color-theme.json"
       }
     ]
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+  }
 }

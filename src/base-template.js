@@ -7,8 +7,12 @@ function baseTemplate({
 }) {
   const foregroundDefault = (isDark) ? "#fff" : "#262626";
   const backgroundDefault = (isDark) ? "#262626" : "#fff";
+  const backgroundAlt = (isDark) ? "#212121" : "#efefef";
+  const foregroundAlt = (isDark) ? "#515151" : "#919191";
+
   const foreground = props.foregroundColor || foregroundDefault;
   const background = props.backgroundColor || backgroundDefault;
+  const primary = props.primaryColor || foreground;
 
 
   const template = {
@@ -18,14 +22,15 @@ function baseTemplate({
       "editor.foreground": foreground,
       "tab.activeBackground": props.tabActiveBackgroundColor || background,
       "tab.activeForeground": props.tabactiveForegroundColor || foreground,
-      "tab.inactiveBackground": props.tabInactiveBackgroundColor || background,
+      "tab.inactiveBackground": props.tabInactiveBackgroundColor || backgroundAlt,
       "tab.inactiveForeground": props.tabInactiveForegroundColor || foreground,
+      "tab.activeBorder": primary,
       "sideBar.background": props.sideBarBackgroundColor,
-      "sideBar.border": props.sideBarBorderColor || props.sideBarBackgroundColor,
+      "sideBar.border": props.sideBarBorderColor || foregroundAlt,
       "titleBar.activeBackground": props.titleBarBackgroundColor || background,
       "activityBar.background": props.activityBarColor,
       "statusBar.background": props.statusBarColor,
-      "list.activeSelectionIconForeground": "#fff",
+      "list.activeSelectionIconForeground": foreground,
       "terminal.background": props.terminalBackgroundColor || background,
       "terminal.foreground": props.terminalForegroundColor || foreground,
     },

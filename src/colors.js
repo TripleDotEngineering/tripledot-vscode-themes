@@ -17,17 +17,6 @@ module.exports = {
     "yellow": "#cbb74f",
     "yellowLight": "#f0ed6d"
   },
-  "microsoft": {
-    "OrangeRed": "#F25022",
-    "Green": "#7FBA00",
-    "Blue": "#00A4EF",
-    "Yellow": "#FFB900",
-    "Gray": "#737373",
-    "Purple": "#9332BF",
-    "LightGray": "#C3C3C3",
-    "AmethystPurple": "#AE4BD5",
-    "LavenderPurple": "#CA64EA"
-  },
   "netflix": {
     "red": "#E50914",
     "darkestRed": "#4e0307",
