@@ -2,7 +2,7 @@
   "name": "tdthemes",
   "displayName": "Triple Dot Themes",
   "description": "A collection of themes - including Monokai Neue with multi-level JSON highlighting",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "publisher": "TripleDot",
   "author": {
     "name": "Josh Kaplan"
