@@ -18,6 +18,11 @@ app.get('/json', (req, res) => {
   }
 })
 
+function greeting(name) {
+  return `Hello ${name}!`
+}
+
 app.listen(port, () => {
+  console.log(greeting("World"))
   console.log(`Example app listening on port ${port}`)
 })

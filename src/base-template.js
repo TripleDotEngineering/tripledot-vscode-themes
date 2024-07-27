@@ -124,11 +124,22 @@ function baseTemplate({
         "name": "Functions",
         "scope": [
           "entity.name.function",
-          "support.function"
+          // "support.function"
         ],
         "settings": {
           "fontStyle": "bold",
           "foreground": props.functionsColor
+        }
+      },
+      {
+        "name": "Function Calls",
+        "scope": [
+          "support.function",
+
+        ],
+        "settings": {
+          "fontStyle": "bold",
+          "foreground": props.functionCallColor || props.functionsColor
         }
       },
       {
@@ -491,8 +502,6 @@ function baseTemplate({
         }
       },
 
-
-
       {
         "name": "Extra: Diff Range",
         "scope": [
@@ -517,7 +526,104 @@ function baseTemplate({
         "settings": {
           "foreground": "#434343"
         }
-      }
+      },
+
+      /* --------------------( Rust)-------------------- */
+      {
+        "name": "Rust Entity Declaration",
+        "scope": "entity.name.type.declaration.rust",
+        "settings": {
+          "foreground": props.rustEntityColor || foreground
+        }
+      },
+      {
+        "name": "Rust Fn",
+        "scope": "keyword.other.fn.rust",
+        "settings": {
+          "foreground": props.rustFnColor || foreground
+        }
+      },
+      {
+        "name": "Rust Self",
+        "scope": "variable.language.self.rust",
+        "settings": {
+          "foreground": props.rustSelfColor || foreground
+        }
+      },
+      {
+        "name": "Rust Keyword: Other",
+        "scope": "keyword.other.rust",
+        "settings": {
+          "foreground": props.keywordsColor || foreground
+        }
+      },
+      {
+        "name": "Rust Keyword: Control Flow",
+        "scope": "keyword.control.rust",
+        "settings": {
+          "foreground": props.keywordsControlColor || props.keywordsColor || foreground
+        }
+      },
+      {
+        "name": "Rust Types: Numerics",
+        "scope": "entity.name.type.numeric.rust",
+        "settings": {
+          "foreground": props.rustTypesNumericColor || props.typesColor || foreground
+        }
+      },
+      {
+        "name": "Rust Struct Declaration",
+        "scope": "keyword.declaration.struct.rust storage.type.rust",
+        "settings": {
+          "foreground": props.rustStructDeclaration || props.typesColor || foreground
+        }
+      },
+      {
+        "name": "Rust Trait Declaration",
+        "scope": "keyword.declaration.trait.rust storage.type.rust",
+        "settings": {
+          "foreground": props.rustTraitDeclaration || props.typesColor || foreground
+        }
+      },
+      {
+        "name": "Rust Attr",
+        "scope": "meta.attribute.rust",
+        "settings": {
+          "foreground": props.rustAttribute || props.typesColor || foreground
+        }
+      },
+      {
+        "name": "Rust Attr Type",
+        "scope": "meta.attribute.rust entity.name.type.rust",
+        "settings": {
+          "foreground": props.rustAttributeType || props.typesColor || foreground
+        }
+      },
+      {
+        "name": "Rust Function Call",
+        "scope": "meta.function.call.rust entity.name.function.rust",
+        "settings": {
+          "foreground": props.functionsCallColor || props.functionsColor || foreground
+        }
+      },
+      {
+        "name": "Rust Borrow",
+        "scope": "keyword.operator.borrow.and.rust",
+        "settings": {
+          "foreground": props.rustBorrowColor || foreground
+        }
+      },
+      {
+        "name": "Rust Macro Function",
+        "scope": "entity.name.function.macro.rust",
+        "settings": {
+          "foreground": props.rustMacroFunction || props.functionsCallColor || props.functionsColor || foreground
+        }
+      },
+
+
+
+
     ]
   }
 

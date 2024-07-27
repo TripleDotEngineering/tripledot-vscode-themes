@@ -5,7 +5,7 @@ const myColors = colors['tripledot-nix'];
 const template = baseTemplate({
   name: "Triple Dot Light",
   isDark: false,
-  activityBarColor: myColors.magenta,
+  activityBarColor: "#777",
   statusBarColor: "#333",
   sideBarBackgroundColor: "#f8f8f8",
   commentsColor: "#999",

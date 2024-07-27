@@ -11,7 +11,7 @@
     "sideBar.background": "#f8f8f8",
     "sideBar.border": "#919191",
     "titleBar.activeBackground": "#fff",
-    "activityBar.background": "#c44b8a",
+    "activityBar.background": "#777",
     "statusBar.background": "#333",
     "list.activeSelectionIconForeground": "#262626",
     "terminal.background": "#fff",
@@ -106,7 +106,16 @@
     {
       "name": "Functions",
       "scope": [
-        "entity.name.function",
+        "entity.name.function"
+      ],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#4b8ac4"
+      }
+    },
+    {
+      "name": "Function Calls",
+      "scope": [
         "support.function"
       ],
       "settings": {
@@ -477,6 +486,97 @@
       "scope": "meta.diff.header.to-file",
       "settings": {
         "foreground": "#434343"
+      }
+    },
+    {
+      "name": "Rust Entity Declaration",
+      "scope": "entity.name.type.declaration.rust",
+      "settings": {
+        "foreground": "#262626"
+      }
+    },
+    {
+      "name": "Rust Fn",
+      "scope": "keyword.other.fn.rust",
+      "settings": {
+        "foreground": "#262626"
+      }
+    },
+    {
+      "name": "Rust Self",
+      "scope": "variable.language.self.rust",
+      "settings": {
+        "foreground": "#262626"
+      }
+    },
+    {
+      "name": "Rust Keyword: Other",
+      "scope": "keyword.other.rust",
+      "settings": {
+        "foreground": "#c44b8a"
+      }
+    },
+    {
+      "name": "Rust Keyword: Control Flow",
+      "scope": "keyword.control.rust",
+      "settings": {
+        "foreground": "#c44b8a"
+      }
+    },
+    {
+      "name": "Rust Types: Numerics",
+      "scope": "entity.name.type.numeric.rust",
+      "settings": {
+        "foreground": "#8ac44b"
+      }
+    },
+    {
+      "name": "Rust Struct Declaration",
+      "scope": "keyword.declaration.struct.rust storage.type.rust",
+      "settings": {
+        "foreground": "#8ac44b"
+      }
+    },
+    {
+      "name": "Rust Trait Declaration",
+      "scope": "keyword.declaration.trait.rust storage.type.rust",
+      "settings": {
+        "foreground": "#8ac44b"
+      }
+    },
+    {
+      "name": "Rust Attr",
+      "scope": "meta.attribute.rust",
+      "settings": {
+        "foreground": "#8ac44b"
+      }
+    },
+    {
+      "name": "Rust Attr Type",
+      "scope": "meta.attribute.rust entity.name.type.rust",
+      "settings": {
+        "foreground": "#8ac44b"
+      }
+    },
+    {
+      "name": "Rust Function Call",
+      "scope": "meta.function.call.rust entity.name.function.rust",
+      "settings": {
+        "foreground": "#4b8ac4"
+      }
+    },
+    {
+      "name": "Rust Borrow",
+      "scope": "keyword.operator.borrow.and.rust",
+      "settings": {
+        "foreground": "#262626"
+      }
+    },
+    {
+      "name": "Rust Macro Function",
+      "scope": "entity.name.function.macro.rust",
+      "settings": {
+        "foreground": "#4b8ac4"
       }
     },
     {

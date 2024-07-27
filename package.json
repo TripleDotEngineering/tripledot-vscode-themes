@@ -30,6 +30,16 @@
   "contributes": {
     "themes": [
       {
+        "label": "Raspberry",
+        "uiTheme": "vs-dark",
+        "path": "./themes/raspberry-color-theme.json"
+      },
+      {
+        "label": "Raz",
+        "uiTheme": "vs-dark",
+        "path": "./themes/raz-color-theme.json"
+      },
+      {
         "label": "Triple Dot Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/tripledot-dark-color-theme.json"
@@ -58,11 +68,6 @@
         "label": "MS Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/ms-dark-color-theme.json"
-      },
-      {
-        "label": "Fluent Dark",
-        "uiTheme": "vs-dark",
-        "path": "./themes/fluent-dark-color-theme.json"
       }
     ]
   },
